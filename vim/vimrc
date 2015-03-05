@@ -1,0 +1,74 @@
+" Make Vim more useful
+set nocompatible
+
+language messages en_US.UTF-8
+set langmenu=en_US.UTF-8 "Menus in UTF-8 English.
+syntax on
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+"set backspace=indent,eol,start
+set nu
+set fileencodings=utf-8
+set showmatch
+set showcmd
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" Leave hidden buffers open
+set hidden
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+    set undodir=~/.vim/undo
+endif
+
+" Highlight current line
+set cursorline
+
+" Highlight dynamically as pattern is type
+set incsearch
+
+" Show current mode
+set showmode
+
+execute pathogen#infect()
+
+colo solarized
+set background=dark
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" vim-airline
+let g:airline_powerline_fonts = 1
+set laststatus=2
+
+"NERDTree Tabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+nnoremap <Leader>l :TagbarToggle<CR>
+
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Anonymice\ Powerline\ Bold\ 11
+    elseif has("gui_photon")
+        set guifont=Anonymice\ Powerline\ Bold\ 11
+    elseif has("gui_kde")
+        set guifont=Anonymice\ Powerline\ Bold\ 11
+    elseif has("x11")
+        set guifont=Anonymice\ Powerline\ Bold\ 11
+    else
+        set guifont=Anonymice\ Powerline\ Bold\ 11
+    endif
+endif
+
+augroup vimrc_autocmds
+    autocmd BufEnter * match Error /\%101v.\+/
+augroup END
