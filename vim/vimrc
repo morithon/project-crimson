@@ -54,7 +54,7 @@ set laststatus=2
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " SemanticHighlight
-nnoremap <Leader>s :SemanticHighlightToggle
+nnoremap <Leader>s :SemanticHighlightToggle<CR>
 
 nnoremap <Leader>l :TagbarToggle<CR>
 
