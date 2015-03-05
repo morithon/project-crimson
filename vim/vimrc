@@ -53,6 +53,9 @@ set laststatus=2
 "NERDTree Tabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
+" SemanticHighlight
+nnoremap <Leader>s :SemanticHighlightToggle
+
 nnoremap <Leader>l :TagbarToggle<CR>
 
 if has("gui_running")
