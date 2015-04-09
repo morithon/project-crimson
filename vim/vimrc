@@ -36,6 +36,10 @@ set incsearch
 " Show current mode
 set showmode
 
+" Switch ; and : mapping
+nnoremap ; :
+nnoremap : ;
+
 execute pathogen#infect()
 
 colo solarized
