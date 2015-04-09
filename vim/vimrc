@@ -58,6 +58,9 @@ nnoremap <Leader>s :SemanticHighlightToggle<CR>
 
 nnoremap <Leader>l :TagbarToggle<CR>
 
+"search highlighting
+set hlsearch
+
 if has("gui_running")
     if has("gui_gtk2")
         set guifont=Anonymice\ Powerline\ Bold\ 11
